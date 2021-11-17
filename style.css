@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {box-sizing: border-box;}
+
+body{
+    font-size: 12px;
+    font-family:  'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #333;
+    line-height: 115%;
+}
+
+img {display: block;}
+
+.container{
+    width: 991px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    padding: 0px 0 20px;
+}
+
+.usersVideos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.videoItem{
+    position: relative;
+    display: block;
+    width: 300px;
+    aspect-ratio: 1/1.5;
+    padding: 0px;
+    margin: 25px 4px 0;
+}
+
+.videoItem__cover{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    background: #333;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.videoItem__preloader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.videoItem__preloader img{width: 80px;}
+
+video.video{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    z-index: 9;
+}
+
+.videoItem__info__wrapp{
+    position: absolute;
+    bottom: 0;
+    color: white;
+    padding: 12px 8px;
+}
+
+.videoItem__description__top{margin-bottom: 4px;}
+
+.videoItem__description{
+    height: 40px;
+    padding-top: 4px;
+}
+
+.description__hashTags{
+    /* position: absolute; */
+    /* bottom: 0; */
+    margin: 4px 0;
+    font-weight: 600;
+    color: rgb(65, 172, 214);
+}
+
+.videoItem__description__wrapp{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.description__logoName{
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+
+.description__avatar img{
+    width: 36px;
+    border-radius: 50%;
+}
+
+.description__name{
+    margin-left: 6px;
+    font-size: 15px;
+    color: rgb(122, 122, 122);
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.description__nickName{
+    margin-left: 4px;
+    font-size: 15px;
+    color: rgb(122, 122, 122);
+    font-weight: 400;
+}
+
+a.description__name{text-decoration: none;}
+
+a.description__nickName:hover{
+    text-decoration: underline;
+    color: #000;
+}
+
+.description__counters{
+    display: flex;
+    margin-right: 0;
+    align-items: center;
+    justify-content: right;
+}
+
+.description__name img{
+    width: 18px;
+    height: 16px;
+    display: inline;
+}
+
+img.play__icon{
+    width: 14px;
+    height: 15px;
+    display: inline;
+}
+
+.videoItem__name a{color: aquamarine;}
+
+.userInfo{
+    width: 100%;
+    padding-top: 20px;
+}
+
+.userInfo__main{
+    width: 100%;
+    display: flex;
+}
+
+.userInfo__logo img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.userInfo__names{
+    width: 100%;
+    padding: 24px 24px;
+}
+
+.userInfo__names__nickname{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.userInfo__names__idname{
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.userInfo__counters{
+    width: 100%;
+    font-size: 18px;
+    display: flex;
+    /* align-items: center;
+    flex-wrap: wrap; */
+    padding: 20px 0;
+}
+
+.userInfo__counters__item{
+    width: 100%;
+    text-align: center;
+    line-height: 100%;
+}
+
+.counter__big{
+    font-size: 21px;
+    font-weight: 700;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.userInfo__signature{
+    font-size: 15px;
+    line-height: 162%;
+    padding: 0 20px;
+}
+
+@media screen and (max-width: 990px) {
+    .container{
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .usersVideos{justify-content: center;}
+
+    .userInfo__main {padding:  0 10px;}
+
+    .counter__big{display: block;}
+}
+
+@media screen and (max-width: 419px) {
+    .userInfo__logo img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .userInfo__names {padding: 5px 0;}
+
+    .userInfo__counters {
+        flex-wrap: wrap;
+        font-size: 15px;
+        padding: 10px 0;
+    }
+
+    .counter__big {display: inline;}
+
+    .userInfo__main {display: block;}
+
+    .userInfo__logo img, .userInfo__names{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .videoItem{
+        width: 100%;
+        margin: 6px 4px 0;
+    }
+
+    .userInfo__signature {
+        line-height: 125%;
+        padding: 0px 10px;
+    }
+
+    .counter__big {
+        font-size: 17px;
+    }
+}
